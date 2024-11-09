@@ -1,0 +1,215 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #2e2e2e;
+  padding: 2vh 5vw;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* Main Container */
+#resume-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2vw;
+  gap: 2vw;
+}
+
+/* Left Section Styling */
+.left-side {
+  flex: 1;
+  max-width: 45%;
+  background-color: #1a374d;
+  color: #f4f6f9;
+  border-radius: 8px;
+  padding: 2vw;
+  text-align: center;
+}
+
+.left-side img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin-bottom: 1.5vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #e8eaf6;
+  margin-bottom: 1.2vh;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #a5c1d3;
+  margin-bottom: 1vh;
+  border-bottom: 2px solid #a5c1d3;
+  padding-bottom: 0.5vh;
+}
+
+/* Right Section Styling */
+.right-side {
+  flex: 1;
+  max-width: 45%;
+  background-color: #f4f6f9;
+  color: #333;
+  border-radius: 8px;
+  padding: 2vw;
+}
+
+.right-side h2 {
+  color: #3c6997;
+}
+
+section {
+  margin-bottom: 2vh;
+}
+
+strong, b {
+  font-weight: bold;
+  color: #5b6871;
+}
+
+/* Personal Info Section */
+.personal-info p,
+.education p,
+#skills p,
+.work-experience p {
+  margin-bottom: 1vh;
+  font-size: 1rem;
+  color: #5b6871;
+}
+
+.personal-info a {
+  color: #3c6997;
+  text-decoration: none;
+}
+
+.personal-info a:hover {
+  text-decoration: underline;
+}
+
+/* Skills List */
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills li {
+  padding: 0.8vh 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#skills li strong {
+  color: #1a374d;
+}
+
+
+/* Button Styling */
+button#toggle-skills {
+  display: block;
+  margin: 2vh auto;
+  padding: 1vh 2vw;
+  background-color: #3c6997;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button#toggle-skills:hover {
+  background-color: #2a5367;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #resume-container {
+    padding: 2vh;
+  }
+
+  .left-side img {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #resume-container {
+    flex-direction: column;
+    padding: 2vh;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .left-side img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  #resume-container {
+    padding: 2vh 4vw;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  button#toggle-skills {
+    font-size: 0.8rem;
+  }
+
+  .personal-info p,
+  .education p,
+  #skills p,
+  .work-experience p {
+    font-size: 0.9rem;
+  }
+
+  .left-side img {
+    width: 80px;
+  }
+}
